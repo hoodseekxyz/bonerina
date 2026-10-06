@@ -12,7 +12,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Every BONER needs a BONERINA. A polished marble partner in burgundy and gold. Not a security. The contract is not posted.",
+          "Every BONER needs a BONERINA. A polished marble partner in burgundy and gold. Not a security.",
       },
       { name: "theme-color", content: "#FBF9F5" },
     ],

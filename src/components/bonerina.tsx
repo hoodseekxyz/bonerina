@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { X_ACCOUNT } from "@/lib/xposts";
 
-const CONTRACT = "";
+const CONTRACT = "0x8b7924fe528fb87a58ded8a7e20e472cb9931e18";
 
 const NAV = [
   { href: "#pair", label: "The pair" },
@@ -68,7 +68,7 @@ const QUESTIONS = [
   },
   {
     q: "Where is the contract?",
-    a: "Not posted. The line under the headline is empty on purpose. When an address exists, it lands there, and it is still not an instruction to buy.",
+    a: "Under the headline. An address, not an instruction to buy.",
   },
   {
     q: "Does she lock a share?",
@@ -328,7 +328,8 @@ export function Bonerina() {
           <p className="font-display text-3xl">bonerina</p>
           <p className="mt-3 max-w-2xl text-gold-soft">
             A meme page. Not affiliated with Hims, Hers, or Robinhood. Not
-            medical advice. Not financial advice. No contract is posted here.
+            medical advice. Not financial advice. The contract is the line
+            under the headline. Not an instruction to buy.
             The statues are statues. The ribbons are the signature, not a
             promise.
           </p>
