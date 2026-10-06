@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { X_ACCOUNT } from "@/lib/xposts";
 
 const CONTRACT = "";
 
@@ -107,6 +108,15 @@ export function Bonerina() {
           </nav>
           <div className="flex items-center gap-2">
             <a
+              href={X_ACCOUNT}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="BONERINA on X"
+              className="grid size-11 place-items-center rounded-full border border-gold/60 text-wine hover:bg-wine hover:text-cream"
+            >
+              <XGlyph />
+            </a>
+            <a
               href="#ca"
               className="hidden rounded-full bg-wine px-4 py-2 text-sm text-cream sm:inline"
             >
@@ -145,6 +155,15 @@ export function Bonerina() {
                 </a>
               ),
             )}
+            <a
+              href={X_ACCOUNT}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-2xl px-3 py-3 text-wine"
+              onClick={() => setMenu(false)}
+            >
+              X · bonerinalong
+            </a>
           </nav>
         ) : null}
       </header>
@@ -313,9 +332,27 @@ export function Bonerina() {
             The statues are statues. The ribbons are the signature, not a
             promise.
           </p>
-          <p className="mt-4 text-gold">bonerina.xyz</p>
+          <p className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-gold">
+            <a href="https://bonerina.xyz" className="hover:text-cream">
+              bonerina.xyz
+            </a>
+            <a href={X_ACCOUNT} target="_blank" rel="noreferrer" className="hover:text-cream">
+              x.com/bonerinalong
+            </a>
+          </p>
         </div>
       </footer>
     </div>
+  );
+}
+
+function XGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="size-4">
+      <path
+        fill="currentColor"
+        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+      />
+    </svg>
   );
 }

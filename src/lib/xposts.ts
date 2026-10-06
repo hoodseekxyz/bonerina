@@ -4,9 +4,12 @@ export const listing = {
     "Every BONER needs a BONERINA.\nHe flexes. She turns. Polished marble, burgundy silk, gold ribbon.\nNot a clinic. Not a security. The contract is not on this page.",
 };
 
+export const X_ACCOUNT = "https://x.com/bonerinalong";
+
 export const profile = {
   name: "bonerina",
-  handle: "bonerina",
+  handle: "bonerinalong",
+  x: X_ACCOUNT,
   bio: "Every BONER needs a BONERINA. He flexes. She turns. bonerina.xyz",
   location: "The other pedestal",
   link: "https://bonerina.xyz",

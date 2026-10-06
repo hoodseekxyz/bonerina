@@ -27,6 +27,14 @@ export function XPosts() {
             <a href="/xposts" className="font-display text-2xl leading-none text-gold">
               X News
             </a>
+            <a
+              href={profile.x}
+              target="_blank"
+              rel="noreferrer"
+              className="hidden text-wine hover:text-ink sm:inline"
+            >
+              @{profile.handle}
+            </a>
           </nav>
         </div>
       </header>
@@ -54,7 +62,14 @@ export function XPosts() {
             />
             <div className="min-w-0 flex-1">
               <p className="font-display text-3xl">{profile.name}</p>
-              <p className="text-muted">@{profile.handle}</p>
+              <a
+                href={profile.x}
+                target="_blank"
+                rel="noreferrer"
+                className="text-wine hover:underline"
+              >
+                @{profile.handle}
+              </a>
               <dl className="mt-4 grid gap-3 text-sm">
                 <Field label="Bio" value={profile.bio} copied={copied === "bio"} onCopy={() => copy("bio", profile.bio)} />
                 <Field
@@ -68,6 +83,14 @@ export function XPosts() {
               <div className="mt-5 flex flex-wrap gap-2">
                 <a href="/x/avatar.jpg" download="bonerina-avatar.jpg" className="rounded-full bg-wine px-4 py-2 text-sm text-cream">
                   Download avatar
+                </a>
+                <a
+                  href={profile.x}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-gold/40 px-4 py-2 text-sm"
+                >
+                  Open on X
                 </a>
                 <a
                   href="/x/banner.jpg"
