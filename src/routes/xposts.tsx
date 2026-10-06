@@ -8,7 +8,7 @@ export const Route = createFileRoute("/xposts")({
       { title: "X News — $BONERINA" },
       {
         name: "description",
-        content: "Fifteen pictures for X. Copy the line. Download the picture. Every BONER needs a BONERINA.",
+        content: "Pictures for X. Copy the line. Download the picture. Every BONER needs a BONERINA.",
       },
     ],
   }),

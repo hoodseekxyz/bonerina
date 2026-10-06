@@ -42,10 +42,10 @@ export function XPosts() {
       <main className="mx-auto max-w-6xl px-5 py-12">
         <p className="text-sm tracking-wide text-gold">X, ready to post</p>
         <h1 className="mt-3 max-w-3xl font-display text-5xl text-wine sm:text-6xl">
-          Fifteen ways to turn
+          Sixteen ways to turn
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">
-          Copy the line. Download the picture. No tag, no contract, no price.
+          Copy the line. Download the picture. No tag. No price.
         </p>
 
         <section className="mt-10 overflow-hidden rounded-card border border-gold/40 bg-card">
@@ -144,8 +144,15 @@ export function XPosts() {
 
         <section className="mt-12 grid gap-8 sm:grid-cols-2">
           {posts.map((post) => (
-            <article key={post.id} className="overflow-hidden rounded-card border border-gold/40 bg-card">
-              <img src={post.file} alt={post.alt} className="aspect-square w-full object-cover" />
+            <article
+              key={post.id}
+              className={`overflow-hidden rounded-card border border-gold/40 bg-card ${"wide" in post && post.wide ? "sm:col-span-2" : ""}`}
+            >
+              <img
+                src={post.file}
+                alt={post.alt}
+                className={"wide" in post && post.wide ? "aspect-video w-full object-cover" : "aspect-square w-full object-cover"}
+              />
               <div className="p-5">
                 <p className="whitespace-pre-line text-base leading-relaxed">{post.caption}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
