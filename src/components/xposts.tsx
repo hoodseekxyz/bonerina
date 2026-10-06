@@ -24,8 +24,8 @@ export function XPosts() {
             <a href="/" className="hover:text-ink">
               Home
             </a>
-            <a href="/xposts" className="text-ink">
-              Posts
+            <a href="/xposts" className="font-display text-2xl leading-none text-gold">
+              X News
             </a>
           </nav>
         </div>

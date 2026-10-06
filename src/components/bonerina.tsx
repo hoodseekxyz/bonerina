@@ -7,7 +7,7 @@ const NAV = [
   { href: "#pair", label: "The pair" },
   { href: "#floor", label: "The floor" },
   { href: "#evening", label: "The evening" },
-  { href: "/xposts", label: "Posts" },
+  { href: "/xposts", label: "X News" },
   { href: "#questions", label: "Questions" },
 ];
 
@@ -89,11 +89,21 @@ export function Bonerina() {
             bonerina
           </a>
           <nav className="hidden items-center gap-6 text-sm text-muted lg:flex">
-            {NAV.map((item) => (
-              <a key={item.href} href={item.href} className="hover:text-wine">
-                {item.label}
-              </a>
-            ))}
+            {NAV.map((item) =>
+              item.href === "/xposts" ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-full bg-gold px-4 py-1.5 font-display text-2xl leading-none text-wine-deep hover:bg-wine hover:text-cream"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <a key={item.href} href={item.href} className="hover:text-wine">
+                  {item.label}
+                </a>
+              ),
+            )}
           </nav>
           <div className="flex items-center gap-2">
             <a
@@ -114,16 +124,27 @@ export function Bonerina() {
         </div>
         {menu ? (
           <nav className="flex flex-col gap-1 border-t border-gold/30 px-5 py-3 lg:hidden">
-            {NAV.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="rounded-2xl px-3 py-3 hover:bg-wine-soft"
-                onClick={() => setMenu(false)}
-              >
-                {item.label}
-              </a>
-            ))}
+            {NAV.map((item) =>
+              item.href === "/xposts" ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-2xl bg-gold px-4 py-4 font-display text-4xl leading-none text-wine-deep"
+                  onClick={() => setMenu(false)}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-2xl px-3 py-3 hover:bg-wine-soft"
+                  onClick={() => setMenu(false)}
+                >
+                  {item.label}
+                </a>
+              ),
+            )}
           </nav>
         ) : null}
       </header>
