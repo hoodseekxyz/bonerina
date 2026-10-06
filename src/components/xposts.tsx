@@ -51,7 +51,7 @@ export function XPosts() {
         <section className="mt-10 overflow-hidden rounded-card border border-gold/40 bg-card">
           <img
             src="/x/banner.jpg"
-            alt="Banner. Every BONER needs a BONERINA, over a dusk balcony."
+            alt="Banner. The pair at dinner, faces and shoulders, city behind."
             className="aspect-[3/1] w-full object-cover"
           />
           <div className="flex flex-col gap-6 p-5 sm:flex-row sm:items-start sm:p-8">
